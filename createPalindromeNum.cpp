@@ -4,6 +4,7 @@ using namespace std;
 #define ll long long
 #define endl "\n"
 
+// Palindrome Generator.
 ll createPalindromeNum(ll n,bool isOddLength){
     ll palindrome = n;
     ll origin;
@@ -16,11 +17,14 @@ ll createPalindromeNum(ll n,bool isOddLength){
     }
     return palindrome;
 }
+
+// Print Palindrome in ascending Order.
 void printPalindromeAscendingOrder(ll n){
     int range = (log10(n)+1)*2 - 1;
 
     for (int i = 1; i <= range; i= 2*i + 1)
     {
+        // 
         string binStr = bitset<8>(i).to_string();
         int binInt = stoi(binStr);
     
