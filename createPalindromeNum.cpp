@@ -28,12 +28,12 @@ void printPalindromeAscendingOrder(ll n){
         int binInt = stoi(binStr);
     
         if(binInt > n) break;
-        for (int j = binInt-1; j <= binInt*9; ++j){
+        for (int j = binInt; j <= binInt*9; ++j){
             ll pal = createPalindromeNum(j,true);
             if(pal > n) break;
             cout<<pal<<endl;   
         }
-        for (int j = binInt-1; j <= binInt*9; ++j){
+        for (int j = binInt; j <= binInt*9; ++j){
             ll pal = createPalindromeNum(j,false);
             if(pal > n) break;
             cout<<pal<<endl;
